@@ -50,7 +50,22 @@ The dataset used for training and testing the model is sourced from https://gith
 7) Model Deployment: Once satisfied with the model's performance, deploy it to make predictions on new, unseen data. Implement a mechanism to input the latest available data and obtain the model's predictions for future time steps.
 
 ## Results
-The prediction results for the past 30 days can be found in the results folder. The file contains the predicted number of new COVID-19 cases for each day.
+The prediction results
+-Graph Predicted VS Actual:
+
+![Matplotlib Graph Predicted Vs Actual](farah-graph-predicted-vs-actual.png)
+
+-Model Performance:
+
+![Model Performance](farah-model-performance.png)
+
+-Model Architecture:
+
+![Model Architecture](farah-model-summary.png)
+
+-Tensorboard MSE:
+
+![Tensorboard MSE](farah-tensorboard-MSE.png)
 
 ## Credits
 - https://github.com/MoH-Malaysia/covid19-public
