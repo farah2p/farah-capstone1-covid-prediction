@@ -8,7 +8,7 @@ Challenges:
 - Model optimization: Determining the optimal number of LSTM nodes and the depth of the model to balance accuracy and efficiency.
 - MAPE error control: Fine-tuning the model to achieve an MAPE error of less than 1% to ensure accurate predictions.
 
-To overcome these challenges, we:
+To overcome these challenges:
 - Gathered the daily COVID-19 case data from https://github.com/MoH-Malaysia/covid19-public to ensure accurate and up-to-date information.
 - Performed iterative experimentation and tuning to find the optimal architecture and hyperparameters for the LSTM model.
 - Implemented regularization techniques and adjusted the model's parameters to minimize the MAPE error and improve prediction accuracy.
