@@ -19,12 +19,12 @@ Moving forward, we hope to address the following challenges and implement additi
 ## Installation and Usage
 To install and run the project, follow these steps:
 ### 1. Clone the repository to your local machine using the following command:
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/farah2p/farah-capstone1-covid-prediction.git
 ### 2. Install the required dependencies by running the following command:
 ```shell
-pip install tensorflow==2.6.0
-pip install numpy==1.21.2
-pip install matplotlib==3.4.3
+pip install tensorflow==2.12.0
+pip install numpy==1.24.2
+pip install matplotlib==3.7.1
 ```
 ### 3. Prepare your dataset with the daily COVID-19 case numbers for Malaysia. Ensure the data is in the appropriate format and stored in the data directory.
 ### 4. Adjust the model parameters, such as the number of LSTM nodes and the window size, in the farah_capstone1_covid.ipynb file according to your needs.
