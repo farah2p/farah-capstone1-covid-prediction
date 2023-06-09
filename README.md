@@ -16,44 +16,31 @@ To overcome these challenges:
 Moving forward, we hope to address the following challenges and implement additional features:
 - Incorporating external factors: Considering other variables such as vaccination rates, government interventions, and public sentiment to enhance the predictive capabilities of the model.
 - Real-time prediction: Developing a system to provide real-time COVID-19 case predictions, allowing timely decision-making for public health authorities.
-
-## Dataset
-The dataset used in this project is sourced from the official data on the COVID-19 epidemic in Malaysia provided by MoH-Malaysia. The dataset includes historical daily case data, which will be used for training and testing the LSTM model.
-
-The dataset used for training and testing the model is sourced from https://github.com/MoH-Malaysia/covid19-public. It includes daily COVID-19 case counts in Malaysia for a specific time period. The dataset consists of the following columns:
-
-- date: The date of the recorded data
-- cases_new: The number of new COVID-19 cases reported on that date.
-- cases_new
-- cases_import
-- cases_recovered
-- cases_active
-- cases_cluster
-- cases_unvax
-- cases_pvax
-- cases_fvax
-- cases_boost
-- cases_child
-- cases_adolescent
-- cases_adult
-- cases_elderly
-- cases_0_4
-- cases_5_11
-- cases_12_17
-- cases_18_29
-- cases_30_39
-- cases_40_49
-- cases_50_59
-- cases_60_69
-- cases_70_79
-- cases_80
-- cluster_import
-- cluster_religious
-- cluster_community
-- cluster_highRisk
-- cluster_education
-- cluster_detentionCentre
-- cluster_workplace
+## Installation and Usage
+To install and run the project, follow these steps:
+### 1. Clone the repository to your local machine using the following command:
+git clone https://github.com/your-username/your-repository.git
+### 2. Install the required dependencies by running the following command:
+```shell
+pip install tensorflow==2.6.0
+pip install numpy==1.21.2
+pip install matplotlib==3.4.3
+```
+### 3. Prepare your dataset with the daily COVID-19 case numbers for Malaysia. Ensure the data is in the appropriate format and stored in the data directory.
+### 4. Adjust the model parameters, such as the number of LSTM nodes and the window size, in the farah_capstone1_covid.ipynb file according to your needs.
+### 5. Generate predictions using the trained model (in H5 and PKL formats) to forecast future COVID-19 cases in Malaysia by running the following commands:
+For H5 format:
+```shell
+python predict.py --model=h5 --model-path=saved_models.h5
+```
+For PKL format:
+```shell
+python predict.py --model=pkl --model-path=saved_models.pkl
+```
+### 6. Monitor the training loss and performance using TensorBoard by running the following command:
+```shell
+tensorboard --logdir tensorboard_logs/capstone1
+```
 ## Model Criteria
 - The model architecture should consist of LSTM, Dense, and Dropout layers.
 - The LSTM layers should have a maximum of 64 nodes, and the model's depth can be adjusted based on requirements.
