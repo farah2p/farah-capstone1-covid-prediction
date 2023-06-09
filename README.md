@@ -27,20 +27,13 @@ pip install numpy==1.24.2
 pip install matplotlib==3.7.1
 ```
 ### 3. Prepare your dataset with the daily COVID-19 case numbers for Malaysia. Ensure the data is in the appropriate format and stored in the data directory.
-### 4. Adjust the model parameters, such as the number of LSTM nodes and the window size, in the farah_capstone1_covid.ipynb file according to your needs.
-### 5. Generate predictions using the trained model (in H5 and PKL formats) to forecast future COVID-19 cases in Malaysia by running the following commands:
-For H5 format:
-```shell
-python predict.py --model=h5 --model-path=saved_models.h5
-```
-For PKL format:
-```shell
-python predict.py --model=pkl --model-path=saved_models.pkl
-```
+### 4. Open the Jupyter Notebook or Python script containing the code.
+### 5. Run the code cells or execute the script to perform data preprocessing, model training, and evaluation.
 ### 6. Monitor the training loss and performance using TensorBoard by running the following command:
 ```shell
 tensorboard --logdir tensorboard_logs/capstone1
 ```
+Access Tensorboard in your web browser using the provided URL.
 ## Model Criteria
 - The model architecture should consist of LSTM, Dense, and Dropout layers.
 - The LSTM layers should have a maximum of 64 nodes, and the model's depth can be adjusted based on requirements.
