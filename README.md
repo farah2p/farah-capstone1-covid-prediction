@@ -1,5 +1,11 @@
 # COVID-19 Case Prediction using LSTM Neural Network
 This project aims to create a deep learning model using LSTM neural network to predict new COVID-19 cases in Malaysia. The model utilizes the past 30 days of case data to forecast future case numbers. The goal is to achieve an MAPE (Mean Absolute Percentage Error) of less than 1% when tested against a testing dataset. The model's predictions will help determine if travel bans should be imposed or rescinded.
+
+## Dataset
+The dataset used is sourced from https://github.com/MoH-Malaysia/covid19-public and it two CSV files for training and testing the model:
+- cases_malaysia_train.csv: This file contains the training data, including the historical records of COVID-19 cases in Malaysia.
+- cases_malaysia_test.csv: This file contains the testing data, which includes the recent records of COVID-19 cases in Malaysia.
+
 ## Project Description
 The year 2020 witnessed the global spread of the COVID-19 pandemic, leading to widespread disruptions and loss of lives. Scientists believe that the absence of AI-assisted automated tracking and predicting systems contributed to the rapid spread of the virus. Therefore, deep learning models, such as LSTM neural networks, can be utilized to predict daily COVID-19 cases accurately.
 ### Challenges Faced and Solutions
@@ -16,32 +22,37 @@ To overcome these challenges:
 Moving forward, we hope to address the following challenges and implement additional features:
 - Incorporating external factors: Considering other variables such as vaccination rates, government interventions, and public sentiment to enhance the predictive capabilities of the model.
 - Real-time prediction: Developing a system to provide real-time COVID-19 case predictions, allowing timely decision-making for public health authorities.
-## Installation and Usage
-To install and run the project, follow these steps:
-### 1. Clone the repository to your local machine using the following command:
-git clone https://github.com/farah2p/farah-capstone1-covid-prediction.git
-### 2. Before running the code, ensure that you have the following dependencies installed:
-- TensorFlow
-- Pandas 1.5.3
-- Matplotlib
-- Tensorboard 2.12.3
 
-Install the required dependencies by running the following command:
+## Dependencies
+To run this code, you need to have the following dependencies installed:
+- pandas
+- numpy
+- tensorflow
+- scikit-learn
+- matplotlib
+
+You can install these dependencies using pip:
 ```shell
-pip install tensorflow==2.12.0
-pip install numpy==1.24.2
-pip install matplotlib==3.7.1
-pip install pandas==1.5.3
-pip install tensorboard===2.12.3
+pip install pandas numpy tensorflow scikit-learn matplotlib
 ```
-### 3. Prepare your dataset with the daily COVID-19 case numbers for Malaysia. Ensure the data is in the appropriate format and stored in the data directory.
-### 4. Open the Jupyter Notebook or Python script containing the code.
-### 5. Run the code cells or execute the script to perform data preprocessing, model training, and evaluation.
-### 6. Monitor the training loss and performance using TensorBoard by running the following command:
+
+## Usage
+### 1. Clone the repository to your local machine using the following command:
+git clone https://github.com/farah2p/farah-capstone1-covid-prediction.git1) 
+### 2) Place the cases_malaysia_train.csv and cases_malaysia_test.csv files in the same directory as the code files.
+### 3) Open the terminal or command prompt and navigate to the directory containing the code files.
+### 4) Run the code using the following command:
+```shell
+python farah_capstone1_covid.py
+```
+### 5) The model will train on the training data and evaluate its performance on the testing data.
+### 6) After training, the model will generate predictions for the testing data and plot a graph comparing the actual and predicted COVID-19 cases.
+### 7) Monitor the training loss and performance using TensorBoard by running the following command:
 ```shell
 tensorboard --logdir tensorboard_logs/capstone1
 ```
 Access Tensorboard in your web browser using the provided URL.
+
 ## Model Criteria
 - The model architecture should consist of LSTM, Dense, and Dropout layers.
 - The LSTM layers should have a maximum of 64 nodes, and the model's depth can be adjusted based on requirements.
@@ -49,9 +60,11 @@ Access Tensorboard in your web browser using the provided URL.
 - The Mean Absolute Percentage Error (MAPE) should be less than 1% when evaluated on the testing dataset. The MAPE is calculated using the formula:
   Mean Absolute Percentage Error = (Mean Absolute Error / (sum(actual)) * 100%
 - The training loss displayed using TensorBoard.
+
 ## Software
 - Visual Studio Code
 - TensorFlow framework
+
 ## Methodology
 1) Problem Definition: The goal is to develop a predictive model that can forecast the number of new COVID-19 cases (cases_new) in Malaysia for future time steps based on the historical data of the number of cases over the past 30 days
 2) Data Collection: Gather the historical data of the number of COVID-19 cases in Malaysia, including the daily counts of cases over the past 30 days. The dataset includes the dates and the corresponding number of cases_new for each date.
@@ -60,6 +73,19 @@ Access Tensorboard in your web browser using the provided URL.
 5) Model Training: Train the LSTM model using the prepared training dataset. This involves feeding the input sequences of the past 30 days' cases and training the model to predict the next day's number of new cases. Configure the training parameters by setting the number of epochs to 100.
 6) Model Evaluation: Evaluate the trained LSTM model using the testing dataset. Measure the performance of the model using  mean absolute error (MAE). Assess the model's ability to accurately predict the number of new cases in Malaysia.
 7) Model Deployment: Once satisfied with the model's performance, deploy it to make predictions on new, unseen data. Implement a mechanism to input the latest available data and obtain the model's predictions for future time steps.
+
+## Model Summary
+The deep learning model architecture used in this project is as follows:
+- Input layer: Accepts the input shape of the data.
+- LSTM layer 1: Consists of 64 LSTM units and returns sequences.
+- Dropout layer 1: Helps prevent overfitting by randomly dropping 20% of the LSTM units' outputs.
+- LSTM layer 2: Consists of 64 LSTM units and returns sequences.
+- Dropout layer 2: Helps prevent overfitting by randomly dropping 20% of the LSTM units' outputs.
+- LSTM layer 3: Consists of 64 LSTM units.
+- Dropout layer 3: Helps prevent overfitting by randomly dropping 20% of the LSTM units' outputs.
+- Dense layer: Single output neuron for regression without activation.
+- The model is compiled using the Adam optimizer, mean squared error (MSE) loss function, and metrics such as mean absolute error (MAE), MAPE, and MSE.
+
 ## Project Output
 After training the concrete crack image classification model, the following results were obtained:
 - Training Loss: 0.0014
@@ -99,5 +125,6 @@ Below are some sample visualizations generated by the project:
 ## Credits
 The COVID-19 case data used in this project is sourced from:
 https://github.com/MoH-Malaysia/covid19-public
+
 ## Contributing
 Contributions to this project are welcome. If you find any issues or have suggestions for improvement, please open an issue or submit a pull request on the GitHub repository.
