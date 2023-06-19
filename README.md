@@ -38,7 +38,7 @@ pip install pandas numpy tensorflow scikit-learn matplotlib
 
 ## Usage
 ### 1. Clone the repository to your local machine using the following command:
-git clone https://github.com/farah2p/farah-capstone1-covid-prediction.git1) 
+git clone https://github.com/farah2p/farah-capstone1-covid-prediction.git1
 ### 2) Place the cases_malaysia_train.csv and cases_malaysia_test.csv files in the same directory as the code files.
 ### 3) Open the terminal or command prompt and navigate to the directory containing the code files.
 ### 4) Run the code using the following command:
