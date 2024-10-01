@@ -87,7 +87,7 @@ The deep learning model architecture used in this project is as follows:
 - The model is compiled using the Adam optimizer, mean squared error (MSE) loss function, and metrics such as mean absolute error (MAE), MAPE, and MSE.
 
 ## Project Output
-After training the concrete crack image classification model, the following results were obtained:
+After training the model, the following results were obtained:
 - Training Loss: 0.0014
 - Mean Absolute Error (MAE) on Training Data: 0.0238
 - Mean Absolute Percentage Error (MAPE) on Training Data: 69792.2266
